@@ -611,13 +611,12 @@ h3 {
 .services__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
-  background: var(--c-border);
-  border: 1.5px solid var(--c-border);
+  gap: 1.5rem;
 }
 
 .service-card {
   background: var(--c-bg);
+  border: 1.5px solid var(--c-border);
   padding: 2.25rem 2rem;
   transition: background var(--dur-fast) var(--ease-out),
               transform var(--dur-fast) var(--ease-out);

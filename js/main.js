@@ -4,6 +4,21 @@
 
 'use strict';
 
+/* ── HERO VIDEO: force autoplay ── */
+(function initHeroVideo() {
+  const video = document.querySelector('.hero__bg video');
+  if (!video) return;
+  video.muted = true;
+  const promise = video.play();
+  if (promise !== undefined) {
+    promise.catch(() => {
+      // Autoplay blocked – try again on first user interaction
+      document.addEventListener('click', () => video.play(), { once: true });
+      document.addEventListener('touchstart', () => video.play(), { once: true });
+    });
+  }
+})();
+
 /* ── NAV: Scroll state ── */
 (function initNav() {
   const nav = document.getElementById('nav');
