@@ -315,6 +315,7 @@ h3 {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  background: var(--c-bg, #0a0908);
 }
 .hero__photo {
   width: 100%;
